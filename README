@@ -1,6 +1,0 @@
-._ ._ _  _ _  _ _ o._  _  ._   
-|_)| (_)(_(/__>_> || |(_|o|_)\/
-|                      _| |  / 
-
-The tools folder contains some useful tool for using processing.py on linux, with jedit and especially opengl on 64 bit linux.
-The examples demonstrate the terse syntax of python (cf java and even regular processing in some instances), also some deficiencies/anomalies of python, lack of switch, lack of mutable string (alternative solutions are presented).
