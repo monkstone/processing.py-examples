@@ -3,7 +3,7 @@
 # adjust JAVA_HOME and the path to the processing-py.jar to match your environment 
 # similary adjust memory requirements, bigger is not always better
 # quotes about the $@ solve the path to the processing script, but sadly not the path
-# to resources, my fix is to use relative path "../data/resource" moral is spaces in
+# to resources, my fix is to use a relative path "../data/resource".  Moral is spaces in
 # folder names should be avoided, they are an abomination introduced by Mr Bill Gates et al
 
 export JAVA_HOME="/opt/jdk1.6.0_31"
