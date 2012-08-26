@@ -1,4 +1,4 @@
-import processing.core.PVector as PVector
+from processing.core import PVector
 from quaternion import Quaternion
 from math import sqrt
 
@@ -18,15 +18,16 @@ class ArcBall(object):
         self.q_now = Quaternion()
         self.q_down = Quaternion()
         self.q_drag = Quaternion() 
-        self.axisSet = [PVector(1.0, 0.0, 0.0), PVector(0.0, 1.0, 0.0), PVector(0.0, 0.0, 1.0)]
+        self.axis_set = [PVector(1.0, 0.0, 0.0), PVector(0.0, 1.0, 0.0), PVector(0.0, 0.0, 1.0)]
         self.axis = -1  
         
-    def selectAxis(self,  axis):
+    def selectAxis(self, axis):
         """
         call this from sketch (typically in keyPressed() to constrain rotation to one axis)
         valid input 0, 1, 2 or -1
         """
-        self.axis = axis
+        if ((axis == -1) or (axis == 0) or (axis == 1) or (axis == 2)):
+          self.axis = axis
         
     def __mouse2sphere(self, x, y):
         """
@@ -40,7 +41,9 @@ class ArcBall(object):
             v.normalize()
         else:
             v.z = sqrt(1.0 - mag)
-        return  v  if (self.axis == -1) else (self.__constrain(v, self.axisSet[self.axis]))
+        if (self.axis != -1):
+            v = self.__constrain(v, self.axis_set[self.axis])
+        return  v  
     
     def mousePressed(self, x, y):
         """
@@ -61,9 +64,9 @@ class ArcBall(object):
         """
         private constrain (used to constrain axis)
         """
-        res = PVector.sub(vector, PVector.mult(axis, PVector.dot(axis, vector)))
-        res.normalize()
-        return res
+        vector.sub(axis.mult(axis, PVector.dot(axis, vector)))
+        vector.normalize()
+        return vector
         
     def update(self):
         """
