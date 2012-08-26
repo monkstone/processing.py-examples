@@ -49,14 +49,19 @@ def defineLights():
 def keyPressed():
     """
     Important gotcha coming from regular processing
-    key.char not key to compare key characters, fix axis
-    of rotation by holding down key corresponding to axis
+    key was not char, fixed in recent versions?
+    Contstrain axis of rotation by holding down key 
+    corresponding to axis
     """
-    if (key.char == 'x'):
+    # print key # to test if fixed
+    #if (key == 120):
+    if (key == 'x'):  # if fixed
         arcball.selectAxis(X)
-    if (key.char == 'y'):
+    #if (key == 121):
+    if (key == 'y'):  # if fixed  
         arcball.selectAxis(Y)
-    if (key.char == 'z'):
+    #if (key == 122):
+    if (key == 'z'):  # if fixed 
         arcball.selectAxis(Z)
 
 def keyReleased():
