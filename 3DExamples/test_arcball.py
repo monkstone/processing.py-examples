@@ -5,6 +5,7 @@ test_arcball.py by Martin Prout a processing.py sketch
 Sketch features the use of ArcBall class, provides intuitive manipulation of sketch object
 ArcBall class uses Quaternions class for efficient calculation of rotation, hold down x, y or z
 keys to constrain rotation to that plane otherwise drag mouse for smooth rotation
+@todo add mousewheel zoom?
 """
 X = 0
 Y= 1
@@ -17,7 +18,7 @@ def setup():
 
 def draw():
     background(0xff66c0ff)
-    translate(width/2.0, height/2.0, -height/4.0)
+    translate(width/2.0, height/2.0)
     defineLights()
     update()
     lights()
