@@ -1,8 +1,8 @@
-<!-- Monkstone, 2011-February-11 -->
+<!-- Monkstone, 2012-November-02 -->
 <COMMANDO>
 <UI>
 <CAPTION LABEL="Run">
-<FILE_ENTRY LABEL="ruby file" VARNAME="file" EVAL="buffer.getName()"/>
+<FILE_ENTRY LABEL="python file" VARNAME="file" EVAL="buffer.getName()"/>
 </CAPTION>
 <CAPTION LABEL="Path to PYP5">
 <ENTRY LABEL="(no spaces)" VARNAME="PYP5" DEFAULT="/home/tux/bin/"/>
@@ -14,12 +14,12 @@
      So now I call the file at its absolute address using the prefix dir, and it works
 -->
 <COMMAND SHELL="System" CONFIRM="FALSE">
-          dir = new StringBuilder(MiscUtilities.getParentOfPath(buffer.getPath()));
-	  buf = new StringBuilder(PYP5 + "pyp5 ");
-	  buf.append(" ");
+      buf = new StringBuilder(100);
+      dir = MiscUtilities.getParentOfPath(buffer.getPath());
+      dir = dir.replace(" ", "\\ ");
+	  buf.append(PYP5).append("pyp5 ");
 	  buf.append(dir);
 	  buf.append(file);
-	  buf.toString();
 </COMMAND>
 </COMMANDS>
 </COMMANDO>
