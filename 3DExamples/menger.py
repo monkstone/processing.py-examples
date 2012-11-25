@@ -10,39 +10,16 @@ menger = []
 def setup():
     size(800,600, P3D)
     global arcball
-    arcball = ArcBall(width/2.0, height/2.0, min(width - 20, height - 20) * 0.5)
-    create_menger(0, 0, 0, height/2.0)
+    camera(width/2.0, height/2.0, (height/2.0) / tan(PI*30.0 / 180.0), 0, 0, 0, 0, 1, 0)
+    arcball = ArcBall(0, 0, height * 0.6)
+    
     
 def draw():
     background(0,  0,  200)
     lights()
     defineLights()    
-    translate(width/2.0, height/2.0)
     update()
-#    export(menger)
-    for cub in menger:
-        draw_cube(cub)
-    print(frameRate)
-
-def draw_cube(cube):
-    """
-    Draw a cube with centre xx, yy, zz and size sz
-    """
-    noStroke()
-    beginShape(TRIANGLES)
-    for vec in cube.mesh_array():
-        vertex(vec.x, vec.y, vec.z)
-    endShape()
-    
-def export(menger):
-    f = open("menger.inc", 'w')
-    f.write("#declare mesh_objects = union{\n")
-    for cub in menger: 
-        f.write(cub.mesh2())
-    f.write("}\n")        
-    f.close()
-    exit(0)
-    
+    create_menger(0, 0, 0, arcball.radius)
 
 def create_menger(xx, yy, zz, sz):
     """
@@ -51,13 +28,60 @@ def create_menger(xx, yy, zz, sz):
     global menger	
     u = sz / 3.0
     if (sz < 50):
-        menger.append(Box.createAcube(xx, yy, zz, sz).toMesh())
+        my_cube(xx, yy, zz, sz)
     else:
-        for i in xrange(-1, 2, 1):
-            for j in xrange(-1, 2, 1):
-                for k in xrange(-1, 2, 1):
+        for i in range(-1, 2, 1):
+            for j in range(-1, 2, 1):
+                for k in range(-1, 2, 1):
                     if ((abs(i) + abs(j) + abs(k)) > 1):
                         create_menger(xx + (i * u), yy + (j * u), zz + (k * u), u)
+                        
+def my_cube(xx,  yy,  zz,  sz):
+    """
+    Draw a cube with centre xx, yy, zz and size sz
+    """
+    beginShape(QUADS)
+    normal(0, 0, 1)
+    vertex(-sz / 2.0 + xx, -sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, -sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, +sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, +sz / 2.0 + yy, -sz / 2.0 + zz)
+    
+    #Back face    
+    normal(0, 0, -1)
+    vertex(-sz / 2.0 + xx, -sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, -sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, +sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, +sz / 2.0 + yy, +sz / 2.0 + zz)
+    
+    #Left face    
+    normal(1, 0, 0)
+    vertex(-sz / 2.0 + xx, -sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, -sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, +sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, +sz / 2.0 + yy, -sz / 2.0 + zz)
+    
+    #Right face    
+    normal(-1, 0, 0)
+    vertex(+sz / 2.0 + xx, -sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, -sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, +sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, +sz / 2.0 + yy, -sz / 2.0 + zz)
+    
+    #Top face    
+    normal(0, 1, 0)
+    vertex(-sz / 2.0 + xx, -sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, -sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, -sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, -sz / 2.0 + yy, +sz / 2.0 + zz)
+    
+    #Bottom face    
+    normal(0, -1, 0)
+    vertex(-sz / 2.0 + xx, +sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, +sz / 2.0 + yy, -sz / 2.0 + zz)
+    vertex(+sz / 2.0 + xx, +sz / 2.0 + yy, +sz / 2.0 + zz)
+    vertex(-sz / 2.0 + xx, +sz / 2.0 + yy, +sz / 2.0 + zz)
+    endShape()                        
                     
 def defineLights():
     """

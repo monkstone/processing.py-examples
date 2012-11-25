@@ -1,0 +1,741 @@
+[global]
+ast|∗
+xi|ξ
+Upsilon|Υ
+<-|←
+female|♀
+qed|∎
+leftarpoonup|↼
+angle|∠
+varphi|φ
+swarrow|↙
+nillams|∍
+rightarrow|→
+delta|δ
+bigtriangleup|∆
+wr|≀
+propto|∝
+succ|≻
+hookleftarrow|↪
+Delta|Δ
+geq|≥
+Box|∞
+subseteq|⊆
+rceil|⎤
+nabla|∇
+union|∪
+Diamond|◇
+triangleright|⊳
+mangle|∢
+nwarrow|↖
+beta|β
+coprod|∐
+notin|∉
+bullet|∙
+->|→
+leftarrow|←
+sharp|♯
+in|∈
+succeq|≽
+rfloor|⎦
+Downarrow|⇓
+male|♂
+rho|ρ
+Pi|Π
+cdot|⋅
+doesnotdivide|∤
+heartsuit|♡
+uparrow|↑
+emptyset|∅
+forall|∀
+rightleftharpoons|⇋
+div|∻
+rhd|◁
+leftrighthaproons|⇌
+phi|ϕ
+aleph|א
+omega|ω
+Updownarrow|⇳
+upsilon|υ
+doteq|≐
+perp|⊥
+Omega|Ω
+int|∫
+lhd|▷
+approx|≈
+notexists|∄
+bigcirc|◯
+alpha|α
+simeq|≃
+sqsubseteq|⊑
+zeta|ζ 
+oint|∮
+ss|ß
+gg|≫
+psi|ψ
+OO|Ø
+niton|∌
+gamma|γ
+clubsuit|♣
+diamond|◇
+OE|Œ
+Gamma|Γ
+triangleleft|⊲
+and|∧
+cap|∩
+setminus|∖
+backslash|\
+vee|∨
+searrow|↘
+bemol|♭
+parallel|∥
+kappa|κ
+frown|⁀
+circ|∘
+sqcap|⊔
+pounds|£
+neq|≠
+leq|≤
+dashv|⊢
+neg|¬
+AE|Æ
+AA|Å
+Phi|Φ
+Lambda|Λ
+nearrow|↗
+iota|ι
+Xi|Ξ
+oslash|⊘
+complement|∁
+equiv|≡
+epsilon|ε
+ddag|‡
+leadsto|↝
+<->|↔
+pm|±
+downarrow|↓
+pi|π
+top|⊤
+sim|∼
+leftharpoondown|↽
+lfloor|⎣
+sangle|∢
+otimes|⊗
+leftrightarrow|↔
+Psi|Ψ
+sun|☼
+sum|∑
+exists|∃
+inter|∩
+star|∗
+or|∨
+bigtriangledown|∇
+supseteq|⊇
+oo|ø
+smile|‿
+preceq|≼
+smallin|∊
+??|¿
+rightharpoonup|⇀
+mid||
+oe|œ
+copyright|©
+theta|ϴ
+cong|≅
+Leftarrow|⇐
+mapsto|↦
+diamondsuit|♢
+tau|τ
+S|§
+Theta|Θ
+nu|ν
+c->|↪
+lceil|⎡
+prec|≺
+updownarrow|↕
+sigma|σ
+wedge|∧
+spadesuit|♠
+ni|∋
+notparallel|∦
+Sigma|Σ
+cup|∪
+asymp|≍
+ominus|⊝
+notsim|≁
+odot|⊙
+subset|⊂
+lambda|λ
+surd|√
+mu|μ
+Rightarrow|⇒
+ae|æ
+mp|∓
+partial|∂
+supset|⊃
+sqcup|⊔
+aa|å
+=>|⇒
+chi|χ
+sqsubset|⊏
+rightharpoondown|⇁
+bowtie|⋈
+divides|∣
+eta|η
+hookrightarrow|↩
+sqsupset|⊐
+increment|∆
+dag|†
+Uparrow|⇑
+ll|≪
+sqsupseteq|⊒
+<=|⇐
+prod|∏
+models|⊨
+[c++]
+[sqr]
+[nsis2]
+[asp]
+[latex]
+[factor]
+[batch]
+[assembly-mcs51]
+[vrml2]
+[groovy]
+[relax-ng-compact]
+[icon]
+[velocity]
+[patch]
+[beanshell]
+[pl1]
+[fortran90]
+[pyrex]
+[inno-setup]
+[inform]
+[netrexx]
+[eiffel]
+[fortran]
+[pl-sql9]
+[chill]
+[json]
+[macroscheduler]
+[smalltalk]
+[idl]
+[haxe]
+[pvwave]
+[smarty]
+[ada95]
+[pl-sql]
+[vala]
+[apacheconf]
+[htaccess]
+[clojure]
+[io]
+[pure]
+[properties]
+[metapost]
+[rhtml]
+[powerdynamo]
+[vhdl]
+slv|std_logic_vector( x downto y )
+sl|std_logic
+var|variable
+sig|signal
+[logs]
+[maple]
+[lotos]
+[django]
+[ada]
+[php]
+[processing]
+noc|noCursor();\n
+sat|saturation($1\|)
+MY|mouseY
+em|ellipseMode($1\|);\n
+kr|void keyReleased() {\n\t\|\n}
+rnd|random($1\|)
+MX|mouseX
+el|ellipse($1\|,$2,$3,$4);\n
+imgl|import processing.opengl.*;\n
+kp|void keyPressed() {\n\t\|\n}
+MR|mouseReleased
+SV|Server
+MP|mousePressed
+wi|while($1\|.hasNext()) {\n\t\n}
+wh|while($1\|) {\n\t\n}
+we|while($1\|.hasMoreElements()) {\n\t\n}
+nosm|noSmooth();\n
+setup3d|void setup() {\n\tsize($1\|,$2,P3D);\n\t\n}\n\nvoid draw() {\n\t\n}
+setup2d|void setup() {\n\tsize($1\|,$2,P2D);\n\t\n}\n\nvoid draw() {\n\t\n}
+SE|Serial
+for|for(int $1 = 0; $1 < $2; $1++) {\n\t\|\n}
+try|try {\n\t\|\n}\ncatch ($1Exception e) {\n\t\n}
+pr|println(\|);\n
+ifmp|if (mousePressed) {\n\t\|\n}
+txm|textureMode($1\|);\n
+cv|curveVertex(\|);\n
+cm|colorMode($1\|);\n
+v|vertex(\|);
+os|openStream("$1\|")
+im|imageMode($1\|);\n
+t|this.
+imv|import processing.video.*;\n
+s|stroke($1\|);\n
+KR|keyReleased
+cf|createFont("$1\|",$2);\n
+r|return
+ce|void captureEvent(Capture $1\|) {\n\t$1.read();\n}
+KP|keyPressed
+cd|curveDetail($1\|);\n
+ims|import processing.serial.*;\n
+up|updatePixels();\n
+n|noise($1\|)
+if|if ($1\|) {\n\t\n}\n
+ie|if ($1\|) {\n\t\n} else {\n\t\n}\n
+l|line($1\|,$2,$3,$4);\n
+imn|import processing.net.*;\n
+rem|resetMatrix();\n
+f|fill($1\|);\n
+bv|bezierVertex(\|);\n
+c|case $1\|:\n\t\n\tbreak;\n
+hme|hasMoreElements()
+swi|switch ($1) {\n\tcase \|:\n\t\t\n\t\tbreak;\n\t\n\tdefault:\n\t\t\n}
+PMY|pmouseY
+PMX|pmouseX
+mre|void mouseReleased(MouseEvent e) {\n\tif (e.\|) {\n\t\t\n\t}\n}
+V|Vector
+bg|background($1);\n
+S|String
+lerp|($1+($2-$1)*$3)
+bd|bezierDetail($1\|);\n
+tr|translate($1\|,$2,$3);\n
+bc|beginCamera();\n\tresetMatrix();\n\t\|\nendCamera();
+O|Object
+ifkp|if (keyPressed == '$1\|')
+M|Movie
+tm|textMode($1\|);\n
+kre|void keyReleased(KeyEvent e) {\n\tif (e.\|) {\n\t\t\n\t}\n}
+I|Iterator $1 = $2\|.iterator();\n
+ne|nextElement()
+nd|noiseDetail($1\|);\n
+PI|PImage
+tf|textFont($1\|);\n
+E|Enumeration $1 = $2\|.getElements();\n
+av|available()
+PG|PGraphics
+PF|PFont
+C|Capture
+PA|PApplet
+am|applyMatrix(\|);\n
+sz|screenZ($1\|)
+sy|screenY($1\|)
+sx|screenX($1\|)
+sve|void serverEvent(Server $1\|, Client $2) {\n\t\n}\n
+sw|strokeWidth($1\|);\n
+mr|void mouseReleased() {\n\t\|\n}
+bsh|beginShape($1);\n\t\|\nendShape();
+mp|void mousePressed() {\n\t\|\n}
+argb|int a = ($1>>>24);\nint r = ($1>>16) & 0xff;\nint g = ($1>>8) & 0xff;\nint b = $1 & 0xff;\n
+CL|Client
+ac|System.arraycopy($1,$2,$3,$4,$5);\n
+mm|void mouseMoved() {\n\t\|\n}\n
+setup|void setup() {\n\tsize($1\|,$2);\n\t\n}\n\nvoid draw() {\n\t\n}
+sm|smooth($1\|);\n
+me|void movieEvent(Movie $1\|) {\n\t$1.read();\n}\n
+md|void mouseDragged() {\n\t\|\n}\n
+sf|saveFrame("$1\|");\n
+se|void serialEvent(Serial $1\|) {\n\t\n}\n
+sd|sphereDetail($1\|);\n
+fr|frameRate($1\|);\n
+rz|rotateZ($1\|);\n
+ry|rotateY($1\|);\n
+rx|rotateX($1\|);\n
+mpe|void mousePressed(MouseEvent e) {\n\tif (e.\|) {\n\t\t\n\t}\n}
+ls|loadStrings("$1\|");\n
+bri|brightness($1\|)
+HT|HashTable
+lp|loadPixels();\n
+rs|readString();\n
+pom|popMatrix();\n
+pum|pushMatrix();\n
+not|noTint();\n
+li|loadImage("$1\|");\n
+rm|rectMode($1\|);\n
+nos|noStroke();\n
+kpe|void keyPressed(KeyEvent e) {\n\tif (e.\|) {\n\t\t\n\t}\n}
+lf|loadFont("$1\|.vlw.gz");\n
+lb|loadBytes("$1\|");\n
+rc|readChar();\n
+rb|readBytes();\n
+nof|noFill();\n
+[yab]
+[lua]
+[makefile]
+[sas]
+[rtf]
+[ptl]
+[gcbasic]
+[xsl]
+fes|<xsl:for-each select="\|">\n</xsl:for-each>
+nc|<xsl:number count="\|"/>
+asn|<xsl:attribute-set name="\|">\n</xsl:attribute-set>
+sse|<xsl:strip-space elements="\|"/>
+cos|<xsl:copy-of select="\|"/>
+com|<xsl:comment>\|</xsl:comment>
+imh|<xsl:import href="\|"/>
+an|<xsl:attribute name="\|"></xsl:attribute>
+mt|<xsl:message terminate="\|"></xsl:message>
+vns|<xsl:variable name="\|" select=""/>
+ai|<xsl:apply-imports/>
+ss|<xsl:sort select="\|"/>
+pn|<xsl:param name="\|"/>
+vn|<xsl:variable name="\|"/>
+pse|<xsl:preserve-space elements="\|"/>
+cwt|<xsl:choose>\n\t<xsl:when test="\|">\n\t</xsl:when>\n</xsl:choose>
+wpn|<xsl:with-param name="\|" select=""/>
+it|<xsl:if test="\|">\n</xsl:if>
+tnm|<xsl:template name="\|" match="">\n</xsl:template>
+ctn|<xsl:call-template name="\|"/>
+co|<xsl:copy>\|</xsl:copy>
+pin|<xsl:processing-instruction name="\|"></xsl:processing-instruction>
+om|<xsl:output method="\|"/>
+ats|<xsl:apply-templates select="\|"/>
+oe|<xsl:output encoding="\|"/>
+atsm|<xsl:apply-templates select="\|" mode=""/>
+x|<?xml version="1.0"?>\|
+tdoe|<xsl:text disable-output-escaping="\|"></xsl:text>
+xe|<?xml vesion="1.0" encoding="\|"?>
+t|<xsl:text>\|</xsl:text>
+ctnwp|<xsl:call-template name="\|">\n\t<xsl:with-param name="" select=""/>\n</xsl:call-template>
+s|<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">\n\|\n</xsl:stylesheet>
+o|<xsl:otherwise>\n\|\n</xsl:otherwise>
+cwto|<xsl:choose>\n\t<xsl:when test="\|">\n\t</xsl:when>\n\t<xsl:otherwise>\n\t</xsl:otherwise>\n</xsl:choose>
+n|<xsl:number/>
+tmm|<xsl:template match="\|" mode="">\n</xsl:template>
+m|<xsl:message>\|</xsl:message>
+inh|<xsl:include href="\|"/>
+k|<xsl:key name="\|" match="" use=""/>
+en|<xsl:element name="\|">\n</xsl:element>
+vos|<xsl:value-of select="\|"/>
+f|<xsl:fallback>\|</xsl:fallback>
+tn|<xsl:template name="\|">\n</xsl:template>
+tm|<xsl:template match="\|">\n</xsl:template>
+[moin]
+[bibtex]
+[hxml]
+[modula3]
+[perl]
+[tsp]
+[transact-sql]
+[lisp]
+[smi-mib]
+[actionscript]
+[pop11]
+[progress]
+[ini]
+[html]
+[go]
+[sgml]
+[bcel]
+[psp]
+[antlr]
+[cmake]
+[ant]
+[assembly-m68k]
+[omnimark]
+[interlis]
+[mxml]
+[avro]
+[cvs-commit]
+[lilypond]
+[jsp]
+[foxpro]
+[rfc]
+[tex]
+[mail]
+[assembly-macro32]
+[svn-commit]
+[aspect-j]
+[squidconf]
+[rview]
+[jhtml]
+[jedit-actions]
+[gradle]
+[embperl]
+[mysql]
+[rd]
+[zpt]
+[objective-c]
+[mqsc]
+[lex]
+[prolog]
+[assembly-r2000]
+[sdl/pr]
+[hex]
+[swig]
+[javafx]
+[rebol]
+[s+]
+[dsssl]
+[forth]
+[nqc]
+[s#]
+[fhtml]
+[occam]
+[objectrexx]
+[rpm-spec]
+[apdl]
+[myghty]
+[cplex-lp]
+[scala]
+[tcl]
+[rcp]
+[template-toolkit]
+[sip]
+[python]
+noc|noCursor()\n
+sat|saturation($1\|)
+MY|mouseY
+em|ellipseMode($1\|)\n
+kr|def keyReleased()\:\n\t\|\n
+rnd|random($1\|)
+MX|mouseX
+el|ellipse($1\|,$2,$3,$4)\n
+imgl|import processing.opengl.*\n
+kp|def keyPressed()\:\n\t\|\n
+MR|mouseReleased
+SV|Server
+MP|mousePressed
+nosm|noSmooth()\n
+SE|Serial
+pr|println(\|)\n
+ifmp|if (mousePressed)\:\n\t\|\n
+txm|textureMode($1\|)\n
+cv|curveVertex(\|)\n
+cm|colorMode($1\|)\n
+v|vertex(\|)
+os|openStream("$1\|")
+im|imageMode($1\|)\n
+t|this.
+imv|import processing.video.*\n
+s|stroke($1\|)\n
+KR|keyReleased
+cf|createFont("$1\|",$2)\n
+r|return
+ce|def captureEvent(Capture $1\|)\:\n\t$1.read()\n
+KP|keyPressed
+cd|curveDetail($1\|)\n
+ims|import processing.serial.*\n
+up|updatePixels()\n
+n|noise($1\|)
+if|if ($1\|)\:\n\t\PASSn\n
+ie|if ($1\|)\:\n\t\n else \n\tPASS\n\n
+l|line($1\|,$2,$3,$4)\n
+imn|import processing.net.*\n
+rem|resetMatrix()\n
+f|fill($1\|)\n
+bv|bezierVertex(\|)\n
+hme|hasMoreElements()
+PMY|pmouseY
+PMX|pmouseX
+mre|def mouseReleased(MouseEvent e)\:\n\tif (e.\|)\:\n\t\t\n\t\n
+V|Vector
+bg|background($1)\n
+S|String
+lerp|($1+($2-$1)*$3)
+bd|bezierDetail($1\|)\n
+tr|translate($1\|,$2,$3)\n
+bc|beginCamera()\n\tresetMatrix()\n\t\|\nendCamera()
+O|Object
+ifkp|if (keyPressed == '$1\|')
+M|Movie
+tm|textMode($1\|)\n
+kre|def keyReleased(KeyEvent e)\:\n\tif (e.\|)\:\n\t\t\n\t\n
+I|Iterator $1 = $2\|.iterator()\n
+ne|nextElement()
+nd|noiseDetail($1\|)\n
+PI|PImage
+tf|textFont($1\|)\n
+E|Enumeration $1 = $2\|.getElements()\n
+av|available()
+PG|PGraphics
+PF|PFont
+C|Capture
+PA|PApplet
+am|applyMatrix(\|)\n
+sz|screenZ($1\|)
+sy|screenY($1\|)
+sx|screenX($1\|)
+sve|def serverEvent(Server $1\|, Client $2)\:\n\t\n\n
+sw|strokeWidth($1\|)\n
+mr|def mouseReleased()\:\n\t\|\n
+bsh|beginShape($1)\n\t\|\nendShape()
+mp|def mousePressed()\:\n\t\|\n
+argb|int a = ($1>>>24)\nint r = ($1>>16) & 0xff\nint g = ($1>>8) & 0xff\nint b = $1 & 0xff\n
+CL|Client
+ac|System.arraycopy($1,$2,$3,$4,$5)\n
+mm|def mouseMoved()\:\n\t\|\n\n
+setup|def setup()\:\n\tsize($1\|, $2)\n\n\ndef draw()\:\n\tpass\n
+setup2d|def setup()\:\n\tsize($1\|, $2, P2D)\n\n\ndef draw()\:\n\tpass\n
+setup3d|def setup()\:\n\tsize($1\|, $2, P3D)\n\n\ndef draw()\:\n\tpass\n
+FR|for i in range(\|$1,$2)\:\n\tpass\n
+FL|for item in $1\:\n\tpass\n
+WI|while(\|True)\:\n\tpass\n
+sm|smooth($1\|)\n
+me|def movieEvent(Movie $1\|)\:\n\t$1.read()\n\n
+md|def mouseDragged()\:\n\t\|\n\n
+sf|saveFrame("$1\|")\n
+se|def serialEvent(Serial $1\|)\:\n\t\n\n
+sd|sphereDetail($1\|)\n
+fr|frameRate($1\|)\n
+rz|rotateZ($1\|)\n
+ry|rotateY($1\|)\n
+rx|rotateX($1\|)\n
+mpe|def mousePressed(MouseEvent e)\:\n\tif (e.\|)\:\n\t\t\n\t\n
+ls|loadStrings("$1\|")\n
+bri|brightness($1\|)
+HT|HashTable
+lp|loadPixels()\n
+rs|readString()\n
+pom|popMatrix()\n
+pum|pushMatrix()\n
+not|noTint()\n
+li|loadImage("$1\|")\n
+rm|rectMode($1\|)\n
+nos|noStroke()\n
+kpe|def keyPressed(KeyEvent e)\:\n\tif (e.\|)\:\n\t\t\n\t\n
+lf|loadFont("$1\|.vlw.gz")\n
+lb|loadBytes("$1\|")\n
+rc|readChar()\n
+rb|readBytes()\n
+nof|noFill()\n
+[i4gl]
+[clips]
+[roff]
+[rest]
+[stata]
+[twiki]
+[text]
+[awk]
+[verilog]
+[outline]
+[erlang]
+[yaml]
+[assembly-ags]
+[shellscript]
+[gettext]
+[jcl]
+[jflex]
+[d]
+[c]
+[coldfusion]
+[b]
+[maven]
+[typoscript]
+[scheme]
+[dart]
+[texinfo]
+[slax]
+[assembly-agc]
+[java]
+ne|nextElement()
+Il|SwingUtilities.invokeLater(new Runnable()\n\n\tpublic void run()\n\t\n\t\t\|\n\t\n);
+W|while($1)\n\n\t\|\n
+V|Vector
+Fd|for(int $1 = $2 - 1; $1 >= 0; $1--)\n\n\t\|\n
+serr|System.err.println(\|);
+Fc|for(int $1 = 0; $1 < $2.size(); $1++)\n\n\t$3 \| = ($3)$2.get($1);\n
+Ie|if($1)\n\n\t|\n\nelse\n\n\t\n\n
+VDE|VFS.DirectoryEntry
+S|String
+JE|JEditTextArea
+Fa|for(int $1 = 0; $1 < $2.length; $1++)\n\n\t$3 \| = $2[$1];\n
+P|public
+O|Object
+N|$1 $2 = new $1(\|);
+gta|getTextArea()
+gp|jEdit.getProperty(\|)
+I|if($1)\n\n\t\|\n
+H|Hashtable
+F|for(int $1 = 0; $1 < $2; $1++)\n\n\t\|\n
+Br|BufferedReader $1 = new BufferedReader(\|);
+E|Exception
+D|do\n\n\t\|\n\nwhile($1);
+sp|jEdit.setProperty(\|);
+Mal|MalformedURLException
+C|$1 $2 = ($1)\|
+B|Buffer
+ogs|import org.gjt.sp.
+hme|hasMoreElements()
+El|else\n\n\t\|\n
+IO|IOException
+gb|getBuffer()
+IN|$1 $2 = ($1)$3.next();
+Ei|else if($1)\n\n\t\|\n
+chs|Box.createHorizontalStrut(\|)
+Cget|($1)$2.get($3)
+sbp|jEdit.setBooleanProperty(\|);
+cg|Box.createGlue()
+logw|Log.log(Log.WARNING,this,\|);
+gip|jEdit.getIntegerProperty(\|)
+CtoArray|($1[])$2.toArray(new $1[$2.size()])
+logn|Log.log(Log.NOTICE,this,\|);
+logm|Log.log(Log.MESSAGE,this,\|);
+DMTN|DefaultMutableTreeNode
+loge|Log.log(Log.ERROR,this,\|);
+cvs|Box.createVerticalStrut(\|)
+logd|Log.log(Log.DEBUG,this,\|);
+WI|while($1.hasNext())\n\n\t\|\n
+ogsu|import org.gjt.sp.util.
+gbp|jEdit.getBooleanProperty(\|)
+sout|System.out.println(\|);
+ogsj|import org.gjt.sp.jedit.
+[assembly-parrot]
+[xml]
+YY|<$1>\n\|\n</$1>
+Ykeycombo|<keycombo><keycap>$1</keycap><keycap>$2</keycap></keycombo>
+Ykeycap|<keycap>\|</keycap>
+[dot]
+[rakefile]
+[cil]
+[powershell]
+[logtalk]
+[postscript]
+[sql-loader]
+[redcode]
+[literate-haskell]
+[renderman-rib]
+[doxygen]
+[javacc]
+[pike]
+[ruby]
+[applescript]
+[ml]
+[pascal]
+[c#]
+[bbj]
+[freemarker]
+[coffeescript]
+[vbscript]
+[url]
+[visualbasic]
+[povray]
+[jmk]
+[icalendar]
+[slate]
+[tld]
+[shtml]
+[haskell]
+[gsp]
+[hlsl]
+[n3]
+[plaintex]
+[cobol]
+[csv]
+[css]
+[assembly-x86]
+[binsource-agc]
+[javascript]
+[uscript]
+[gnuplot]
+[xq]
