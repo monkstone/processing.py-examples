@@ -5,7 +5,7 @@ Features the use of dict of functions (as a pythonic version of switch)
 Uses a grammar module to create production, and uses trignometry in place
 of processing affine transforms to calculate the line coordinates. 
 """
-import pycimport
+
 from math import cos, pi, sin, sqrt
 
 grammar = None

@@ -6,7 +6,9 @@ Features processing affine transforms.
 """
 from math import pi
 import processing.opengl
+import peasycam
 import peasy.PeasyCam as PeasyCam
+
 from grammar import grammar
 
 # some lsystem constants
@@ -16,6 +18,9 @@ ANGLE = 2
 BEN = pi/360   # just a bit of fun set BEN to zero for a regular Hilbert
 THETA = pi/2 + BEN
 PHI = pi/2 - BEN
+ADJUST = [0, 0.5, -1.5, 3.5, -7.5, 15]
+distance = 200
+depth = 3
 
 RULES = {
     'A': "B>F<CFC<F>D+F-D>F<1+CFC<F<B1^",
@@ -26,24 +31,24 @@ RULES = {
 
 AXIOM = 'A'
 
-production = None   # need exposure at module level
-
 def render(production):       
     """
     Render evaluates the production string and calls box primitive
     uses processing affine transforms (translate/rotate)
     """
+    global distance, depth
+   
+    translate(-distance * ADJUST[depth], -distance * ADJUST[depth], -distance * ADJUST[depth])
     lightSpecular(204, 204, 204) 
     specular(255, 255, 255) 
-    shininess(1.0) 
-    distance = 20
+    shininess(1.0)    
     repeat = 3
     for val in production:
         if val == "F":
-            translate(0, 0, -distance / 2)
-            box(3, 3, distance - 1.6)
-            translate(0, 0, -distance / 2)
-            box(3, 3, 3);
+            translate(0,  0,  -distance / 2 )
+            box(distance/ 6, distance/ 6, distance* 5/ 6)
+            translate(0,  0,  -distance / 2 )
+            box(distance / 6, distance / 6, distance / 6);
         elif val == '+': 
             rotateX(THETA * repeat)
             repeat = 1
@@ -64,24 +69,23 @@ def render(production):
             pass  # assert as valid grammar and do nothing
         else: 
             print("Unknown grammar %s" % val)
-        
-def configure_opengl():
-    hint(ENABLE_OPENGL_4X_SMOOTH)     
-    hint(DISABLE_OPENGL_ERROR_REPORT) 
     
 def setup():
     """
     The processing setup statement
     """
-    size(500, 500, OPENGL)
-    configure_opengl()
-    cam = PeasyCam(this, -70, 70, -70,250)
-    cam.setMinimumDistance(height/10)
-    cam.setMaximumDistance(height)    
-    global production
-    production = grammar.repeat(3, AXIOM, RULES)    
+    size(500, 500, P3D)
+    cam = PeasyCam(this, 200)
+    cam.setMinimumDistance(100)
+    cam.setMaximumDistance(500)
+    smooth(16)
+    global production, depth, distance
+    production = grammar.repeat(depth, AXIOM, RULES)
+    distance *= 1/(pow(2, depth) - 1)
     noStroke()
-    fill(200, 0, 180)   
+    fill(200, 0, 180) 
+   
+
    
     
 def draw():
@@ -90,5 +94,6 @@ def draw():
     """
     lights()
     background(255)
+    global production
     render(production)
 

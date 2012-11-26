@@ -5,7 +5,7 @@ Features a lsystem grammar module, that can parse both stochastic and non-stocha
 or a mixture thereof. The format of the stochastic rules (as a dict of dict) is described in 
 the grammar module header.
 """
-import pycimport
+
 from math import cos, pi, sin
 from grammar import grammar
 

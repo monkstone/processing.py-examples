@@ -8,8 +8,7 @@ string
 """
 
 from math import pi
-import processing.opengl
-import peasy.PeasyCam as PeasyCam
+from arcball.arcball import ArcBall
 
 # some lsystem constants
 XPOS = 0
@@ -27,66 +26,58 @@ AXIOM = 'A+A+A+A+A+A+A+A'
 
 production = None   # production needs exposure at module level
 
-def __configureOpengl():
-	"""
-	private setup opengl
-	"""
-	hint(ENABLE_OPENGL_4X_SMOOTH)     
-	hint(DISABLE_OPENGL_ERROR_REPORT) 
-	
-	
+
 def render(production): 
 	"""	
 	Render evaluates the production string and calls box primitive
-	uses processing affine transforms
+	uses processing affine transforms (white space in python is crap
+	you need to watch out where final else gets put!!!)
 	"""
 	lightSpecular(204, 204, 204) 
 	specular(255, 255, 255) 
 	shininess(1.0) 
 	
         for val in production:
-    	    if val == "F": 
-    	    	    translate(0, distance/-2, 0)
-    	    	    box(distance/9, distance, distance/9)
-    	    	    translate(0, distance/-2, 0)
-    	    elif val == "+": 
-    	    	    rotateX(DELTA)
-    	    elif val == "-": 
-    	    	    rotateX(-DELTA)
-    	    elif val == ">": 
-    	    	    rotateY(-DELTA)
-    	    	    repeat = 1
-    	    elif val == "<": 
-    	    	    rotateY(DELTA)
-    	    elif val == "&": 
-    	    	    rotateZ(-DELTA) 
-    	    elif val == "^": 
-    	    	    rotateZ(DELTA) 
-    	    elif val == '[':
-    	    	    pushMatrix()      
-    	    elif val == ']':
-    	    	    popMatrix()   
-    	    elif val == 'A':       # required to assert valid grammar
-    	    	    pass     	    
-    	    else: 
-    	    	    print("Unknown grammar %s" % val)    
-    	    
-    	    
+        	if val == "F": 
+        		translate(0, distance/-2, 0)
+        		box(distance/9, distance, distance/9)
+        		translate(0, distance/-2, 0)
+        	elif val == "+": 
+        		rotateX(DELTA)
+        	elif val == "-": 
+        		rotateX(-DELTA)
+        	elif val == ">": 
+        		rotateY(-DELTA)
+        		repeat = 1
+        	elif val == "<": 
+        		rotateY(DELTA)
+        	elif val == "&": 
+        		rotateZ(-DELTA) 
+        	elif val == "^": 
+        		rotateZ(DELTA) 
+        	elif val == "[":
+        		pushMatrix()      
+        	elif val == "]":
+        		popMatrix()   
+        	elif val == "A":       # required to assert valid grammar
+        		pass
+                else: 
+        	     print("Unknown grammar %s" % val)    
+        	
+        	
 def setup():
 	"""
 	Processing setup method
 	"""
 	size(600, 600, OPENGL)
-	__configureOpengl()
-	cam = PeasyCam(this, 100) 
-	cam.setMinimumDistance(200)
-	cam.setMaximumDistance(500)
-	global grammar
-	if grammar == None:
-	    from grammar import grammar
-	global production    # Initialize production in setup, use in draw.
-	production = grammar.repeat(3, AXIOM, RULES)
 	
+	global arcball, grammar
+	arcball = ArcBall(width/2.0, height/2.0, min(width - 20, height - 20) * 0.5)
+	if grammar == None:
+		from grammar import grammar
+		global production    # Initialize production in setup, use in draw.
+		production = grammar.repeat(3, AXIOM, RULES)
+		
 def draw():
 	"""
 	Processing draw method
@@ -94,10 +85,19 @@ def draw():
 	background(0)
 	lights()
 	fill(255, 0, 0)
+	translate(width/2, height/2)
+	update()
 	render(production)
 	
-def mouseReleased():
+def update():
 	"""
-	Save frame function
+	wrap arcball update and rotation as a local function
 	"""
-	saveFrame("dome.png")
+	theta, x, y, z = arcball.update()
+	rotate(theta, x, y, z)    
+	
+def mousePressed():
+	arcball.mousePressed(mouseX, mouseY)
+	
+def mouseDragged():
+	arcball.mouseDragged(mouseX, mouseY) 

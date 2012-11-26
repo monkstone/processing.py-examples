@@ -1,5 +1,4 @@
 from arcball.arcball import ArcBall
-from arcball.box import Box
 
 FOV = PI/3.0
 angle = 0.0

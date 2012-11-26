@@ -16,16 +16,13 @@ form "string substitution" as key with the weighting as value.  A test function 
 skeptic.
 """
 
-
-import random
-
 def __weightedRule(rules):
     """
     A private method used to choose a substitution rule from a dict of rules, according to its
     weighted probality. 'rules' is expected to be a dict where the substition string is the 'key' 
     and the 'value' is the rule weight
     """
-    rand = random.random()
+    rand = random(1.0)
     prob = 0
     tot = sum(rules.values())     # sum probabilities
     for rule in rules.keys():     # iterate over rule choices

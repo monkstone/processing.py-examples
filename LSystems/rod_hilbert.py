@@ -76,7 +76,7 @@ def render(production):
         elif (val == 'A' or val == 'B' or val == 'C' or val == 'D'):            
             pass  # assert as valid grammar and do nothing
         else: 
-            print("Unknown grammar %s" % val)
+        	print("Unknown grammar %d"%val)
 
 
 def drawRod(distance):
@@ -99,8 +99,7 @@ def drawRod(distance):
     sphere(radius)
         
 def configure_opengl():
-    hint(ENABLE_OPENGL_4X_SMOOTH)     
-    hint(DISABLE_OPENGL_ERROR_REPORT) 
+    smooth()
     
 
 def evaluateRules():
@@ -113,7 +112,7 @@ def setup():
     """
     The processing setup statement
     """
-    size(500, 500, OPENGL)
+    size(500, 500, P3D)
     configure_opengl()
     evaluateRules()
     camera(width/2.0, height/2.0, 600, 0, 0, 0, 0, -1, 0)         
@@ -145,11 +144,11 @@ def keyPressed():
     User interaction for processing.py
     """
     global depth, distance
-    if (key == ord('+')) and (depth  < 4):
+    if (key == '+') and (depth  < 4):
         depth += 1
         distance = 280
         evaluateRules()
-    if (key == ord('-')) and (depth > 1):
+    if (key == '-') and (depth > 1):
         depth -= 1
         distance = 280
         evaluateRules()    

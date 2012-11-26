@@ -4,7 +4,7 @@ Amended and adapted to python by Martin Prout
 Features a grammar module, and bit shifting color
 operations, uses a dict for 'pen'.
 """
-import pycimport
+
 from math import cos, radians, sin
 from grammar import grammar
 
