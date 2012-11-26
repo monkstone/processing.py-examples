@@ -7,22 +7,32 @@ ArcBall class uses Quaternions class for efficient calculation of rotation, hold
 keys to constrain rotation to that plane otherwise drag mouse for smooth rotation
 """
 X = 0
-Y= 1
+Y = 1
 Z = 2
 
 def setup():
-    size(600, 600, P3D)
-    global arcball
-    arcball = ArcBall(width/2.0, height/2.0, min(width - 20, height - 20) * 0.5)
+    """
+    processing.py setup
+    """
+    size(800, 600, P3D)
+    smooth(16)
+    global arcball, my_cube
+    camera(width/2.0, height/2.0, (height/2.0) / tan(PI*30.0 / 180.0), 0, 0, 0, 0, 1, 0)
+    arcball = ArcBall(0, 0, height * 0.7)
+    my_cube = createShape(PShape.BOX, [arcball.radius]  * 3)
 
 def draw():
+    """
+    processing.py draw loop
+    """
     background(0xff66c0ff)
-    translate(width/2.0, height/2.0, -height/4.0)
     defineLights()
     update()
     lights()
-    stroke(0)
-    cube(arcball.radius)
+    my_cube.ambient(50)	
+    my_cube.specular(30)	
+    shape(my_cube)
+    
     
 def update():
     """
@@ -32,9 +42,15 @@ def update():
     rotate(theta, x, y, z)    
 
 def mousePressed():
+    """
+    for arcball manipulation
+    """
     arcball.mousePressed(mouseX, mouseY)
   
 def mouseDragged():
+    """
+    for arcball manipulation
+    """
     arcball.mouseDragged(mouseX, mouseY) 
 
 def defineLights():
@@ -48,15 +64,14 @@ def defineLights():
 
 def keyPressed():
     """
-    Important gotcha coming from regular processing
-    key.char not key to compare key characters, fix axis
-    of rotation by holding down key corresponding to axis
+    Constrain axis of rotation by holding down key 
+    corresponding to axis
     """
-    if (key == 'x'):
+    if (key == 'x'):  
         arcball.selectAxis(X)
-    if (key == 'y'):
+    if (key == 'y'):  
         arcball.selectAxis(Y)
-    if (key == 'z'):
+    if (key == 'z'):  
         arcball.selectAxis(Z)
 
 def keyReleased():
@@ -64,35 +79,3 @@ def keyReleased():
     Release axis constraint
     """
     arcball.selectAxis(-1)
-
-def cube(sz):
-    sz *= 0.5  
-    fill(200,  200,  200,  255) 
-    beginShape(QUADS)
-    vertex(-sz, -sz, -sz)
-    vertex(+sz, -sz, -sz)
-    vertex(+sz, +sz, -sz)
-    vertex(-sz, +sz, -sz)
-    vertex(-sz, -sz, +sz)
-    vertex(+sz, -sz, +sz)
-    vertex(+sz, +sz, +sz)
-    vertex(-sz, +sz, +sz)
-    vertex(-sz, -sz, -sz)
-    vertex(-sz, -sz, +sz)
-    vertex(-sz, +sz, +sz)
-    vertex(-sz, +sz, -sz)
-    vertex(+sz, -sz, -sz)
-    vertex(+sz, -sz, +sz)
-    vertex(+sz, +sz, +sz)
-    vertex(+sz, +sz, -sz)
-    vertex(-sz, -sz, -sz)
-    vertex(+sz, -sz, -sz)
-    vertex(+sz, -sz, +sz)
-    vertex(-sz, -sz, +sz)
-    vertex(-sz, +sz, -sz)
-    vertex(+sz, +sz, -sz)
-    vertex(+sz, +sz, +sz)
-    vertex(-sz, +sz, +sz)
-    endShape()
-
-

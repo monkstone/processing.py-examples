@@ -1,0 +1,7 @@
+
+// This macro creates a new 3d processing.py file uses abbreviations
+Buffer newBuffer = jEdit.newFile(view);
+view.goToBuffer(newBuffer);
+newBuffer.setMode("python");
+textArea.setSelectedText("setup3d#200#200#");
+Abbrevs.expandAbbrev(view,true);
