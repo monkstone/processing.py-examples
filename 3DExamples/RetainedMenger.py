@@ -66,7 +66,8 @@ def createCube(xx, yy, zz, sz):
     Create and return a unit cube PShape instance
     """
     dim = sz / 2.0
-    cube = createShape(QUADS)
+    cube = createShape()
+    cube.beginShape(QUADS)
     # Front face
     cube.fill(255)
     cube.normal(0, 0, 1)
@@ -114,7 +115,7 @@ def createCube(xx, yy, zz, sz):
     cube.vertex(+dim + xx, +dim + yy, -dim + zz)
     cube.vertex(+dim + xx, +dim + yy, +dim + zz)
     cube.vertex(-dim + xx, +dim + yy, +dim + zz)
-    cube.end()
+    cube.endShape()
     return cube
   
   

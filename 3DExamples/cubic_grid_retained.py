@@ -27,9 +27,8 @@ def setup():
       for k in range(-width + MARGIN,  width - MARGIN, BOX_SIZE):
         # Base fill color on counter values, abs function
         # ensures values stay within legal range
-        boxFill = color(abs(i), abs(j), abs(k), 50)
-        sz = [BOX_SIZE, BOX_SIZE, BOX_SIZE]
-        cube = createShape(BOX, sz)
+        boxFill = color(abs(i), abs(j), abs(k), 50) 
+        cube = createShape(BOX, [BOX_SIZE] * 3)
         cube.setFill(boxFill)
         cube.translate(k, j, i)
         grid.addChild(cube)
