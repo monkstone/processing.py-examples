@@ -1,4 +1,4 @@
-# CubicGridRetained
+# CubicGrid.py
 #
 # You may need to increase the maximum available memory in the
 # by passing -mx1000m to jvm (in run script if you use that)
