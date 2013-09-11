@@ -2,4 +2,4 @@
 // commands to make sure this is what you intended. Then,
 // save this buffer, and the macro should appear in the
 // Macros menu.
-new console.commando.CommandoDialog(view,"commando.PYP5");
+new console.commando.CommandoDialog(view, "commando.processingpy");
