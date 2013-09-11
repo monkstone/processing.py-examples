@@ -1,37 +1,32 @@
 <?xml version="1.0" ?>
-
+<!-- Commando file for processing.py
+     Since version 0202 by Martin Prout
+     11-Sept-2013
+-->
 <!DOCTYPE COMMANDO SYSTEM "commando.dtd">
 
 <COMMANDO>
 	<UI>
         <CAPTION LABEL="Run Processing.py">
-           <FILE_ENTRY LABEL="Path to java" VARNAME="java" DEFAULT=""/>
             <FILE_ENTRY LABEL="sketch" VARNAME="sketch" EVAL="buffer.getPath()"/>
-            <FILE_ENTRY LABEL="Path to processing-py.jar" VARNAME="processingpy" DEFAULT=""/>
-		</CAPTION>
-		<CAPTION LABEL="VM settings">
-		<ENTRY LABEL="Initial heap size (Mb)" VARNAME="ms" DEFAULT="32" />
-		<ENTRY LABEL="Maximum heap size (Mb)" VARNAME="mx" DEFAULT="128" />
+            <FILE_ENTRY LABEL="Path to processing-py.sh" VARNAME="processingpy" DEFAULT=""/>
 		</CAPTION>
 	</UI>
+	
+
 
 	<COMMANDS>
 		<COMMAND SHELL="System" CONFIRM="FALSE">
+     <!-- cd to working dir -->
+	  buf = new StringBuilder("cd ");
+	  buf.append(MiscUtilities.getParentOfPath(buffer.getPath()));
+	  buf.toString();	
+    </COMMAND>
+    
+		<COMMAND SHELL="System" CONFIRM="FALSE">
 			buf = new StringBuilder(100);
-			buf.append(java);
-			if (!ms.equals("")){
-			buf.append(" -ms");
-			buf.append(ms);
-			buf.append("m");
-			}
-			if (!mx.equals("")){
-			buf.append(" -mx");
-			buf.append(mx);
-			buf.append("m");
-			}
-			buf.append(" -jar ");
 			buf.append(processingpy);
-			buf.append(" ");
+			buf.append("processing-py.sh ");
 			buf.append(sketch.replace(" ", "\\ "));
 			buf.toString();
 		</COMMAND>
