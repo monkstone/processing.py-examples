@@ -1,6 +1,6 @@
 # processing.py experiments #
 
-Get [processing.py here] (https://github.com/jdf/processing.py) it is now as simple as downloading and unzipping. But to make it even easier why not use jEdit as you first ide see [blog](http://secondcomingforprocessingpy.blogspot.co.uk/2012/11/getting-started.html) for details. 
+Get [processing.py here] (https://github.com/jdf/processing.py) it is now as simple as downloading and unzipping. But to make it even easier why not use jEdit as your first processing.py ide see... [blog](http://secondcomingforprocessingpy.blogspot.co.uk/2012/11/getting-started.html) for details. 
 
 ## What is processing.py ##
 
