@@ -1,4 +1,4 @@
-from arcball.arcball import ArcBall
+from arcball import ArcBall
 
 """
 test_arcball.py by Martin Prout a processing.py sketch
@@ -29,8 +29,8 @@ def draw():
     defineLights()
     update()
     lights()
-    my_cube.ambient(50)	
-    my_cube.specular(30)	
+    my_cube.setAmbient(50)	
+    my_cube.setSpecular(30)	
     shape(my_cube)
     
     
