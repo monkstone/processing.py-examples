@@ -7,4 +7,3 @@ for i in range(100):
         stroke(i, j, 100)
         point(i, j)
 
-
