@@ -1,6 +1,6 @@
 """
 elegant_ball.py
-Another opengl sketch from lazydog translated to pyprocessing by monkstone.
+Another opengl sketch from lazydog translated to python mode for processing by Martin Prout.
 http://lazydog-bookfragments.blogspot.com/2009/05/final-version-of-ball-of
 -confusion-for.html
 """
